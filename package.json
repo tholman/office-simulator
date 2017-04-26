@@ -1,0 +1,28 @@
+{
+  "name": "office-simulator",
+  "version": "1.0.0",
+  "description": "Completely accurate simulator of office life.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tholman/office-simulator.git"
+  },
+  "keywords": [
+    "office",
+    "simulator",
+    "bot",
+    "slack"
+  ],
+  "author": "Tim Holman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tholman/office-simulator/issues"
+  },
+  "homepage": "https://github.com/tholman/office-simulator#readme",
+  "dependencies": {
+    "slackbots": "^1.0.2"
+  }
+}
