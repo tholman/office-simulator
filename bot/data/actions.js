@@ -3,19 +3,30 @@
  * - Json object of what the bot can say, and proceeding actions
  */
 
+var variants = {
+  days: ["today", "tomorrow", "on Monday", "on Tuesday", "on Wednesday", "on Thursday", "on Friday"],
+  eatingItems: ["forks", "spoons", "mugs", "cups"],
+  rooms: ["kitchen", "bathroom", "phone booth"],
+  stationary: ["stapler", "hole punch"],
+  websites: ["Facebook", "YouTube"],
+  foodItems: ["yogurt", "raisins", "tomatoes", "eggs"],
+  passiveAggressiveOpeners: [""],
+  passiveAggresiveClosers: ["", "", "", "", "I'll be keeping my eye out.", "We're all on the same team here."] // Seeded with more "ignores";
+}
+
 // Not all actions have an equal or opposite reaction
 var actions = [
   
   {
-    message: "Remember, we have clients in the office today, so everyone be quiet near the meeting rooms."
+    message: "Remember, we have clients in the office %days% so everyone be quiet near the meeting rooms."
   },
 
   {
-    message: "Whoever made the mess in the bathroom, learn to clean up after yourself!"
+    message: "Whoever made the mess in the %rooms%, learn to clean up after yourself!"
   },
 
   {
-    message: "Hey all, don't forget to wash your forks after you eat!"
+    message: "Hey all, don't forget to wash your %eatingItems% after you eat!"
   },
 
   {
@@ -85,10 +96,12 @@ var actions = [
   {
     message: "Yes, we are aware of the current paper shortage, and have ordered more. Please do your photocopies on the first floor, until new supplies arrive."
   },
+
+  {
+    message: "Seems like its time everyone read over our office email policy again, especially reguarding personal emails."
+  },
 ]
 
 var reactions = {};
 
-
-
-module.exports = {actions: actions, reactions: reactions};
+module.exports = {variants: variants, actions: actions, reactions: reactions};
