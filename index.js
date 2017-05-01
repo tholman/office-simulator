@@ -9,6 +9,5 @@ var manager = new Manager({
 });
 
 
-
 // TODO:
 // https://api.slack.com/methods/chat.postMessage

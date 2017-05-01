@@ -85,9 +85,10 @@ var actions = [
   {
     message: "Yes, we are aware of the current paper shortage, and have ordered more. Please do your photocopies on the first floor, until new supplies arrive."
   },
-
 ]
 
 var reactions = {};
 
-module.export = {actions: actions, reactions: reactions};
+
+
+module.exports = {actions: actions, reactions: reactions};
