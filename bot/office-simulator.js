@@ -22,43 +22,48 @@ class officeSimulator {
       name: 'Office Simulator'
     });
 
-    bindMethods(this, ['init', 'testTicker']);
+    bindMethods(this, ['init', 'onTick']);
 
-    this.bot.on('start', this.init);
-    // this.init();
+    // this.bot.on('start', this.init);
+    this.init();
   }
 
   // Initial Announcement
   // Set up memory and timings
   init() {
     
-    this.announce('hi, this is a test');
+    this.announce("Hi, and welcome to Office Simulator. Remember there's no I in Team.");
 
-    // this.ticker = new Ticker({
-    //   interval: 3000, // ms
-    //   callback: this.testTicker
-    // });
+    this.ticker = new Ticker({
+      interval: 3000, // ms
+      callback: this.onTick
+    });
 
-    // this.office = new Office({
-    //   floors: 3,
-    //   objects: {}
-    // });
+    this.office = new Office({
+      floors: 3,
+      hours: {
+        open: 10, // 10
+        close: 18 // til 6
+      },
+      objects: {}
+    });
 
   }
 
-  testTicker(date) {
-    // this.announce("The minutes are: " + date.getMinutes());
-    
-    var announcement = this.office.getAnnouncements(date);
-    this.announce(announcement.message);
+  onTick(date) {
+    // If there are announcements to be made, announce them!
+    var announcement = this.office.getAnnouncement(date);
+    if(!announcement) {
+      return;
+    }
 
-
+    this.announce(announcement.item.message);
   }
 
   // Speak!
   announce(announcement) {
-    // console.log(announcement);
-    this.bot.postMessageToChannel('test', announcement, {icon_emoji: ':chart_with_downwards_trend:'});
+    console.log(announcement);
+    // this.bot.postMessageToChannel('test', announcement, {icon_emoji: ':chart_with_downwards_trend:'});
   }
 
 }

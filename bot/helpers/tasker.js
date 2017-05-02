@@ -4,14 +4,11 @@
 
 var bindMethods = require('./bindMethods');
 
-class sheduler {
+class tasker {
 
   constructor(data) {
     this.data = data;
-    this.init();
   }
-
-  init() {}
 
   getRandomAction() {
     var totalActions = this.data.actions.length;
@@ -41,4 +38,4 @@ class sheduler {
 
 }
 
-module.exports = sheduler;
+module.exports = tasker;
