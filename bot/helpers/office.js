@@ -23,19 +23,8 @@ class office {
   init() {
 
     // Shedule an initial item
-    this.shedule.push(this.sheduler.getRandomAction());
-    
+    this.shedule.push(this.sheduler.getRandomAction()); 
   }
-
-  // getSheduledItems(dateTime) {
-
-  //   for (var i = this.shedule.length; i--; i >= 0) {
-  //     var sheduleItem = this.shedule[i];
-
-  //     // if( sheduleItem.)
-      
-  //   }
-  // }
 
   sheduleItem(dateTime, item) {
     this.shedule.push({dateTime: dateTime, item: item});
