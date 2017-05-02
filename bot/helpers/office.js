@@ -27,15 +27,18 @@ class office {
   }
 
   sheduleItem(date, item) {
-
-    console.log("sheduled for: ", date.getDay(), date.getHours(), date.getMinutes());
-
     this.shedule.push({date: date, item: item});
   }
 
-  sheduleReaction(reaction) {
+  sheduleReaction(announcement) {
 
+    var futureDate = this.getRandomTimeInOfficeHours();
 
+    // Any future date further than 2 days ahead
+    futureDate.setDate(futureDate.getDate() + Math.floor(Math.random() * 10) + 2)
+    futureDate = this.getNonWeekendDate(futureDate);
+
+    this.sheduleItem(futureDate, announcement);
   }
 
   getAnnouncement(date) {
@@ -50,14 +53,14 @@ class office {
         // Remove it from the TO BE shedule
         this.shedule.splice(i, 1);
 
-        // If it has a "reaction", shedule the reaction
-        if( announcement.reaction ) {
-          this.sheduleReaction(this.tasker.getReaction(announcement.reaction));
-        }
-
         // If there are no actions sheduled, shedule another
         if( this.shedule.length === 0) {
           this.sheduleItem(this.getRandomTimeInOfficeHours(), this.tasker.getRandomAction());
+        }
+
+        // If it has a "reaction", shedule the reaction
+        if( announcement.item.reaction ) {
+          this.sheduleReaction(this.tasker.getReaction(announcement.item.reaction));
         }
 
         // Announce the current item!
@@ -72,16 +75,25 @@ class office {
     var date = new Date();
     
     // Tomorrow (but not weekend)
-    date.setDate(date.getDay() + 1);
-    if( date.getDay() < 1 || date.getDay() > 5 ) {
-      date.setDate(1);
-    }
+    date.setDate(date.getDate() + 1);
+    date = this.getNonWeekendDate(date);
 
     // Random hour between opening and closing;
     date.setHours( Math.floor(Math.random() * (this.hours.close - this.hours.open + 1)) + this.hours.open ); 
 
     // Random Minute
     date.setMinutes( Math.floor(Math.random() * 59) );
+
+
+    return date;
+  }
+
+  getNonWeekendDate(date) {
+    if( date.getDay() < 1 ) {
+      date.setDate(date.getDay() + 1);
+    } else if (date.getDay() > 5 ) {
+      date.setDate(date.getDay() + 3);
+    }
 
     return date;
   }

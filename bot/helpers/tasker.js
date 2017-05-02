@@ -12,9 +12,15 @@ class tasker {
 
   getRandomAction() {
     var totalActions = this.data.actions.length;
-    var action = this.data.actions[Math.floor(Math.random() * totalActions)];
+    
+    var action = Object.assign({}, this.data.actions[Math.floor(Math.random() * totalActions)]); // Clone
+    action.message = this.addVariantsToAction(action.message);
 
-    return { message: this.addVariantsToAction(action.message) };
+    return action;
+  }
+
+  getReaction(action) {
+    return this.data.reactions[action];
   }
 
   addVariantsToAction(action) {

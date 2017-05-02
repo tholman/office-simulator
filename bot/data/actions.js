@@ -34,7 +34,8 @@ var actions = [
   },
 
   {
-    message: "Everyone will recieve a lunch survey in their inbox today, please fill it out by Friday! Feel free to suggest options as well."
+    message: "Everyone will recieve a lunch survey in their inbox today, please fill it out %days%! Feel free to suggest options as well.",
+    reaction: "lunch-survey"
   },
 
   {
@@ -102,6 +103,10 @@ var actions = [
   },
 ]
 
-var reactions = {};
+var reactions = {
+  "lunch-survey": {
+    message: "We'll, it looks like only a few of you filled out that lunch survey, so, for better or for worse, it will be the same lunch this week as last."
+  }
+};
 
 module.exports = {variants: variants, actions: actions, reactions: reactions};
