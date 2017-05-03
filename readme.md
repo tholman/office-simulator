@@ -36,7 +36,7 @@ We have spared no expence, simulating the most realistic office messages so you 
 
 3. Next, clone this project, or download it as a [ZIP](https://github.com/tholman/office-simulator/archive/master.zip) and extract it.
 
-4. Open up `index.js` in the root directory, and add replace `SLACK_TOKEN` with your slack token. You can also change the channel from `general` to one of your other channels, if you wish.
+4. Open up `index.js` in the root directory, and add replace `SLACK_API_TOKEN` with your slack token. You can also change the channel from `general` to one of your other channels, if you wish.
 
 5. Finally, run `npm install` and `npm start` in the project, and you should see the initial team building message.
 
