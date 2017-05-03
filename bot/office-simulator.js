@@ -15,17 +15,18 @@ class officeSimulator {
   constructor(params) {
 
     this.token = params.token;
+    this.name = params.name;
+    this.channel = params.channel
     
     // Off while in the plane
     this.bot = new SlackBot({
       token: this.token,
-      name: 'Office Simulator'
+      name: this.name
     });
 
     bindMethods(this, ['init', 'onTick']);
 
-    // this.bot.on('start', this.init);
-    this.init();
+    this.bot.on('start', this.init);
   }
 
   // Initial Announcement
@@ -62,8 +63,7 @@ class officeSimulator {
 
   // Speak!
   announce(announcement) {
-    console.log(announcement);
-    // this.bot.postMessageToChannel('test', announcement, {icon_emoji: ':chart_with_downwards_trend:'});
+    this.bot.postMessageToChannel(this.channel, announcement, {icon_emoji: ':chart_with_downwards_trend:'});
   }
 
 }

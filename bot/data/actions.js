@@ -7,11 +7,11 @@ var variants = {
   days: ["today", "tomorrow", "on Monday", "on Tuesday", "on Wednesday", "on Thursday", "on Friday"],
   eatingItems: ["forks", "spoons", "mugs", "cups"],
   rooms: ["kitchen", "bathroom", "phone booth"],
-  stationary: ["stapler", "hole punch"],
+  stationary: ["stapler", "hole punch", "glue pot"],
   websites: ["Facebook", "YouTube"],
   foodItems: ["yogurt", "raisins", "tomatoes", "eggs"],
   passiveAggressiveOpeners: [""],
-  passiveAggresiveClosers: ["", "", "", "", "I'll be keeping my eye out.", "We're all on the same team here."] // Seeded with more "ignores";
+  passiveAggresiveClosers: ["", "", "", "", "I'll be keeping my eye out.", "We're all on the same team here.", "I'm not your mother."] // Seeded with more "ignores";
 }
 
 // Not all actions have an equal or opposite reaction
@@ -51,11 +51,13 @@ var actions = [
   },
 
   {
-    message: "Everyone, remember to fill out your timesheets before the end of the month."
+    message: "Everyone, remember to fill out your timesheets before the end of the month.",
+    reaction: "timesheets"
   },
 
   {
-    message: "Whoever left the open yogurt in the fridge, please remove it."
+    message: "Whoever left the open yogurt in the fridge, please remove it.",
+    reaction: "yogurt"
   },
 
   {
@@ -67,7 +69,7 @@ var actions = [
   },
 
   {
-    message: "You do NOT need to turn the toaster off at the wall, this is the third time this week!"
+    message: "You do NOT need to turn the toaster off at the wall, this is the third time this week! %passiveAggresiveClosers%"
   },
 
   {
@@ -79,7 +81,7 @@ var actions = [
   },
 
   {
-    message: "This is the third time this year we've had to buy new spoons for the office... please don't take these home, they're for everyone."
+    message: "This is the third time this year we've had to buy new %eatingItems% for the office... please don't take these home, they're for everyone."
   },
 
   {
@@ -95,17 +97,35 @@ var actions = [
   },
 
   {
-    message: "Yes, we are aware of the current paper shortage, and have ordered more. Please do your photocopies on the first floor, until new supplies arrive."
+    message: "Yes, we are aware of the current paper shortage, and have ordered more. Please do your photocopies on the first floor, until new supplies arrive.",
+    reaction: "paper-shortage"
   },
 
   {
-    message: "Seems like its time everyone read over our office email policy again, especially reguarding personal emails."
+    message: "Seems like its time everyone read over our office email policy again, especially regarding personal emails."
   },
+
+  {
+    message: "Don't forget the ergonomics lunch and learn later today!"
+  },
+
+  {
+    message: "Everyone, please remember to pick up your packages from the package room, its beginning to look like a pig sty in there."
+  }
 ]
 
 var reactions = {
   "lunch-survey": {
     message: "We'll, it looks like only a few of you filled out that lunch survey, so, for better or for worse, it will be the same lunch this week as last."
+  },
+  "reaction": {
+    message: "Well, looks like no one removed the yogurt, and now we are growing all sorts of moulds in the fridge. Great."
+  },
+  "paper-shortage": {
+    message: "Ok, we have new paper again. This should get us through the month."
+  },
+  "timesheets": {
+    message: "Seriously, no one has put in a single timesheet. Come on people!"
   }
 };
 
