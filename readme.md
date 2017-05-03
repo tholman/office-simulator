@@ -4,4 +4,6 @@ Office slack messages are the passive agressive post-its of the modern world. Do
 ### In action
 We have spared no expence, simulating the most realistic office messages, so you are never really at ease!
 
+### Installation
 
+### License
