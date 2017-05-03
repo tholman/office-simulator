@@ -40,6 +40,12 @@ We have spared no expence, simulating the most realistic office messages so you 
 
 5. Finally, run `npm install` and `npm start` in the project, and you should see the initial team building message.
 
+## Something to add?
+
+Please, add new messages for the slackbot, etc, to the `/data/actions.js` file... you can use the `%modifier%` to add custom random alterations, as well as the `reaction` key, to add custom reactions.
+
+Submit a PR, and I'll check it out!
+
 ## Note
 
 Office simulator only posts once or twice a day, so if it doesn't seem to be constantly going, its due to painstakingly real realism.
