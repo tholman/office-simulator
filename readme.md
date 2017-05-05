@@ -2,7 +2,7 @@
 Office slack messages are the passive agressive post-its of the modern world. Do you miss the office life? You won't any more with this realistic office slack simulator.
 
 ## In action
-We have spared no expence, simulating the most realistic office messages so you are never really at ease!
+We have spared no expense, simulating the most realistic office messages, so you are never really at ease!
 
 <img src="https://s3.amazonaws.com/tholman.com/office-simulator/github-readme-assets/office-sim-1.png" width="500">
 <img src="https://s3.amazonaws.com/tholman.com/office-simulator/github-readme-assets/office-sim-2.png" width="500">
