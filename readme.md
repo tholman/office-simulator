@@ -48,7 +48,7 @@ Submit a PR, and I'll check it out!
 
 ## Note
 
-Office simulator only posts once or twice a day, so if it doesn't seem to be constantly going, its due to painstakingly real realism.
+Office simulator only posts once or twice a day, so if it doesn't seem to be constantly going, its due to painstakingly accurate realism.
 
 ## License
 
