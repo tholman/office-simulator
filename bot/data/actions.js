@@ -111,12 +111,15 @@ var actions = [
 
   {
     message: "Everyone, please remember to pick up your packages from the package room, its beginning to look like a pig sty in there."
+  },
+  {
+    message: "Don't forget to check all recipients on an email BEFORE hitting send on a reply/reply all! If you need cold medicine or scissors, check the supply room first." 
   }
 ]
 
 var reactions = {
   "lunch-survey": {
-    message: "We'll, it looks like only a few of you filled out that lunch survey, so, for better or for worse, it will be the same lunch this week as last."
+    message: "Well, it looks like only a few of you filled out that lunch survey, so, for better or for worse, it will be the same lunch this week as last."
   },
   "reaction": {
     message: "Well, looks like no one removed the yogurt, and now we are growing all sorts of moulds in the fridge. Great."
