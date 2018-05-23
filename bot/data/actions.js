@@ -121,7 +121,7 @@ var reactions = {
   "lunch-survey": {
     message: "Well, it looks like only a few of you filled out that lunch survey, so, for better or for worse, it will be the same lunch this week as last."
   },
-  "reaction": {
+  "yogurt": {
     message: "Well, looks like no one removed the yogurt, and now we are growing all sorts of moulds in the fridge. Great."
   },
   "paper-shortage": {
