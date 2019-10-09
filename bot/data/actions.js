@@ -11,7 +11,8 @@ var variants = {
   websites: ["Facebook", "YouTube"],
   foodItems: ["yogurt", "raisins", "tomatoes", "eggs"],
   passiveAggressiveOpeners: [""],
-  passiveAggresiveClosers: ["", "", "", "", "I'll be keeping my eye out.", "We're all on the same team here.", "I'm not your mother.", "Creatives! This is about you!"] // Seeded with more "ignores";
+  passiveAggresiveClosers: ["", "", "", "", "I'll be keeping my eye out.", "We're all on the same team here.", "I'm not your mother.", "Creatives! This is about you!"], // Seeded with more "ignores";
+  printerCodes: ["030f", "030g", "b-01", "b-03", "6830_1", "6830_2", "6830_3"]
 }
 
 // Not all actions have an equal or opposite reaction
@@ -73,7 +74,7 @@ var actions = [
   },
 
   {
-    message: "The printer on the first floor is out of ink, we've ordered some more, but don't expect it in until next Wednesday."
+    message: "The %printerCodes% printer on the first floor is out of ink, we've ordered some more, but don't expect it in until next Wednesday."
   },
 
   {
@@ -114,6 +115,9 @@ var actions = [
   },
   {
     message: "Don't forget to check all recipients on an email BEFORE hitting send on a reply/reply all! If you need cold medicine or scissors, check the supply room first." 
+  },
+  {
+    message: "Please DO NOT use the staple feature on the %printerCodes% printer. This breaks it. A manual stapler has been provided."
   }
 ]
 
@@ -129,7 +133,10 @@ var reactions = {
   },
   "timesheets": {
     message: "Seriously, no one has put in a single timesheet. Come on people!"
-  }
+  },
+  "printer-stapler": {
+    message: "Was a warning not posted? The printer is no longer working due to someone trying to use the staple feature. Expect it to be fixed %days%"
+  },
 };
 
 module.exports = {variants: variants, actions: actions, reactions: reactions};
