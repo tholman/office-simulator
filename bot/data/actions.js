@@ -8,7 +8,7 @@ var variants = {
   eatingItems: ["forks", "spoons", "mugs", "cups"],
   rooms: ["kitchen", "bathroom", "phone booth"],
   stationary: ["stapler", "hole punch", "glue pot"],
-  websites: ["Facebook", "YouTube"],
+  websites: ["Facebook", "YouTube", "Reddit"],
   foodItems: ["yogurt", "raisins", "tomatoes", "eggs"],
   passiveAggressiveOpeners: [""],
   passiveAggresiveClosers: ["", "", "", "", "I'll be keeping my eye out.", "We're all on the same team here.", "I'm not your mother.", "Creatives! This is about you!"], // Seeded with more "ignores";
@@ -40,11 +40,11 @@ var actions = [
   },
 
   {
-    message: "Remember! I don't want to name names but if you're borrowing the office stapler, please RETURN it to its correct position."
+    message: "Remember! I don't want to name names but if you're borrowing the office %stationary%, please RETURN it to its correct position."
   },
 
   {
-    message: "Facebook is NOT allowed in the office, we don't want to have to block it, but we will if it continues being a problem."
+    message: "%websites% is NOT allowed in the office, we don't want to have to block it, but we will if it continues being a problem."
   },
 
   {
@@ -117,7 +117,8 @@ var actions = [
     message: "Don't forget to check all recipients on an email BEFORE hitting send on a reply/reply all! If you need cold medicine or scissors, check the supply room first." 
   },
   {
-    message: "Please DO NOT use the staple feature on the %printerCodes% printer. This breaks it. A manual stapler has been provided."
+    message: "Please DO NOT use the staple feature on the %printerCodes% printer. This breaks it. A manual stapler has been provided.",
+    reaction: "printer-stapler"
   }
 ]
 
