@@ -2,16 +2,15 @@
  * Keeping track of time!
  */
 
-var bindMethods = require('./bindMethods');
+var bindMethods = require("./bindMethods");
 
 class ticker {
-
   constructor(params) {
     this.intervalTime = params.interval;
     this.callback = params.callback;
     this.interval = null;
 
-    bindMethods(this, ['callCallback']);
+    bindMethods(this, ["callCallback"]);
 
     this.init();
   }
@@ -23,7 +22,6 @@ class ticker {
   callCallback() {
     this.callback(new Date());
   }
-
 }
 
 module.exports = ticker;
