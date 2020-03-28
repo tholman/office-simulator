@@ -54,4 +54,4 @@ Office simulator only posts once or twice a day, so if it doesn't seem to be con
 
 The MIT License
 
-Copyright (c) 2017 Tim Holman - http://tholman.com
+Copyright (c) 2020 Tim Holman - http://tholman.com
