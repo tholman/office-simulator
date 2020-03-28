@@ -35,7 +35,7 @@ class officeSimulator {
     );
 
     this.ticker = new Ticker({
-      interval: 3000, // ms
+      interval: 420000, // Check a tick every 7 minutes
       callback: this.onTick
     });
 
