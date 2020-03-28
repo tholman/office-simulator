@@ -2,18 +2,20 @@
  * What actions and when!
  */
 
-var bindMethods = require('./bindMethods');
+var bindMethods = require("./bindMethods");
 
 class tasker {
-
   constructor(data) {
     this.data = data;
   }
 
   getRandomAction() {
     var totalActions = this.data.actions.length;
-    
-    var action = Object.assign({}, this.data.actions[Math.floor(Math.random() * totalActions)]); // Clone
+
+    var action = Object.assign(
+      {},
+      this.data.actions[Math.floor(Math.random() * totalActions)]
+    ); // Clone
     action.message = this.addVariantsToAction(action.message);
 
     return action;
@@ -24,16 +26,15 @@ class tasker {
   }
 
   addVariantsToAction(action) {
-
     var parsedAction = [];
     var splitAction = action.split("%");
 
-    for( var i = 0; i < splitAction.length; i++ ) {
-      if( this.data.variants[splitAction[i]] ) {
-
+    for (var i = 0; i < splitAction.length; i++) {
+      if (this.data.variants[splitAction[i]]) {
         var variants = this.data.variants[splitAction[i]];
-        parsedAction.push(variants[Math.floor(Math.random() * variants.length)]);
-
+        parsedAction.push(
+          variants[Math.floor(Math.random() * variants.length)]
+        );
       } else {
         parsedAction.push(splitAction[i]);
       }
@@ -41,7 +42,6 @@ class tasker {
 
     return parsedAction.join("");
   }
-
 }
 
 module.exports = tasker;
