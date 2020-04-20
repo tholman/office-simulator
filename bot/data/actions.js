@@ -90,7 +90,7 @@ var actions = [
   },
 
   {
-    message: "Don't forget, its casual day tomorrow... this doesn't mean jeans and a t shirt, please still dress smart."
+    message: "Don't forget, it's casual day tomorrow... this doesn't mean jeans and a t shirt, please still dress smart."
   },
 
   {
@@ -103,7 +103,7 @@ var actions = [
   },
 
   {
-    message: "Seems like its time everyone read over our office email policy again, especially regarding personal emails."
+    message: "Seems like it's time everyone read over our office email policy again, especially regarding personal emails."
   },
 
   {
@@ -111,7 +111,7 @@ var actions = [
   },
 
   {
-    message: "Everyone, please remember to pick up your packages from the package room, its beginning to look like a pig sty in there."
+    message: "Everyone, please remember to pick up your packages from the package room, it's beginning to look like a pig sty in there."
   },
   {
     message: "Don't forget to check all recipients on an email BEFORE hitting send on a reply/reply all! If you need cold medicine or scissors, check the supply room first." 
